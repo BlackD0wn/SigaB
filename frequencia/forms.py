@@ -8,10 +8,3 @@ class FrequenciaForm(forms.ModelForm):
         model = Frequencia
         fields = ('presente',)
 
-class MateriaForm(forms.ModelForm):
-
-    alunos = forms.ModelMultipleChoiceField(widget=forms.CheckboxSelectMultiple, queryset=Frequencia.objects.all())
-
-    class Meta:
-        model = Materia
-        fields = ('nome',)

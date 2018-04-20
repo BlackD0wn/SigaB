@@ -4,7 +4,7 @@ from django.http import Http404
 from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.decorators import login_required
 from .models import Materia, Frequencia
-from .forms import FrequenciaForm, MateriaForm
+from .forms import FrequenciaForm
 
 
 
@@ -35,7 +35,7 @@ def frequenciaNew(request,pk):
             return redirect('mainPage')
     else:
 
-        form = MateriaForm()
+        form = FrequenciaForm()
         alunos = materia.alunos
         #raise Exception(alunos)
 
